@@ -1,0 +1,23 @@
+<a href="#" class="list-group-item clearfix" (click)="onSelectRecipe()">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text" apphighlightdirective>
+      {{ recipe.description }}
+    </p>
+    <p
+      class="list-group-item-text"
+      [appbetterhighlight]="'green'"
+      [defaultColor]="'red'"
+    >
+      {{ recipe.description }}
+    </p>
+  </div>
+  <div class="pull-right">
+    <img
+      src="{{ recipe.imagePath }}"
+      alt="{{ recipe.name }}"
+      class="img-responsive"
+      style="max-height: 50px"
+    />
+  </div>
+</a>
