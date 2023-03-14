@@ -1,11 +1,16 @@
-<a class="list-group-item clearfix" (click)="onSelectRecipe()">
+<a
+  class="list-group-item clearfix"
+  style="cursor: pointer"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+>
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
     <p class="list-group-item-text" apphighlightdirective>
       {{ recipe.description }}
     </p>
     <p
-      class="list-group-item-text"
+      claress="list-group-item-text"
       [appbetterhighlight]="'green'"
       [defaultColor]="'red'"
     >
