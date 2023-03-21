@@ -8,7 +8,7 @@ export class ShoppingListService{
 
 
     ingredientsChanged = new Subject<Ingredients[]>();
-
+    editItemStarted = new Subject<number>();
     AddIngredients(ingredient: Ingredients){
         this.ingredients.push(ingredient);
         this.ingredientsChanged.next(this.ingredients.slice())
