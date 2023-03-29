@@ -21,14 +21,13 @@ export class AuthComponent{
     }
 
     onSubmit(form: NgForm) {
-       
         if(!form.valid) {
             return ;
         } else {
-
             const email = form.value.email;
             const password = form.value.password;
             let authObs: Observable<any>;
+
             if(this.isLoginMode) {
                 //  ... 
                 this.isLoading = true; 
