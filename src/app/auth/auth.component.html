@@ -10,6 +10,12 @@
         *ngIf="!isLoading"
       >
         <div class="alert alert-danger" *ngIf="error">{{ error }}</div>
+
+        <!-- <app-alert
+          [message]="error"
+          *ngIf="error"
+          (close)="onHandleError()"
+        ></app-alert> -->
         <div class="form-group">
           <label for="Email">E-Mail</label>
           <input
